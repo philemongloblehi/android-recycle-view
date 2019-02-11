@@ -1,5 +1,6 @@
 package com.globlehiphilemon.s2_recyclerview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 );
 
                 Toast.makeText(MainActivity.this, personne.toString(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                startActivity(intent);
 
             }
         });

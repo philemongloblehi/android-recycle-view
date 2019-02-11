@@ -4,6 +4,6 @@
     <string name="tv_prenoms">PRENOMS</string>
     <string name="tv_commune">COMMUNE</string>
     <string name="btn_save">Enregistrer</string>
-    <string name="title">FORM PERSON</string>
+    <string name="title">FORMULAIRE PERSONNES</string>
     <string name="btn_cancel">Annuler</string>
 </resources>
