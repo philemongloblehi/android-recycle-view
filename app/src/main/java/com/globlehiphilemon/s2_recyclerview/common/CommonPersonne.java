@@ -6,8 +6,9 @@ import java.util.ArrayList;
 
 public class CommonPersonne {
 
-    private CommonPersonne() {
-    }
+    public static final String EXTRA_LISTE_PERS = "LISTE PERS";
+
+    private CommonPersonne() {}
 
     public static ArrayList<Personne> getList() {
 

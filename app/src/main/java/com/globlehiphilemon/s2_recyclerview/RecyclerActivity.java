@@ -1,10 +1,12 @@
 package com.globlehiphilemon.s2_recyclerview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.globlehiphilemon.s2_recyclerview.adapter.MyAdapter;
 import com.globlehiphilemon.s2_recyclerview.common.CommonPersonne;
@@ -29,7 +31,15 @@ public class RecyclerActivity extends AppCompatActivity {
 
         this.recyclerView = findViewById(R.id.my_recycler);
 
-        this.personnes = CommonPersonne.getList();
+        Intent intent = getIntent();
+        this.personnes = (ArrayList<Personne>) intent.getSerializableExtra(CommonPersonne.EXTRA_LISTE_PERS);
+
+        if (personnes == null) {
+
+            this.personnes = CommonPersonne.getList();
+        }
+
+//        Toast.makeText(this, personnes.toString(), Toast.LENGTH_LONG).show();
 
         this.recyclerView.setAdapter(new MyAdapter(this, this.personnes));
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -1,6 +1,8 @@
 package com.globlehiphilemon.s2_recyclerview.model;
 
-public class Personne {
+import java.io.Serializable;
+
+public class Personne implements Serializable {
 
     private String code;
     private String nom;
