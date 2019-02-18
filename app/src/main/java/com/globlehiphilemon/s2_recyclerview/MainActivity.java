@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_list:
                 intent = new Intent(this, RecyclerActivity.class);
                 startActivity(intent);
+            case R.id.item_intents:
+                intent = new Intent(this, IntentActivity.class);
+                startActivity(intent);
             case R.id.item_quitter:
                 finish();
             case R.id.item_search:
