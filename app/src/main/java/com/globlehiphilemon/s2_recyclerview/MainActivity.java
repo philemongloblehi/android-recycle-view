@@ -82,15 +82,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        Intent intent;
-
         switch (item.getItemId()) {
             case R.id.item_list:
-                intent = new Intent(this, RecyclerActivity.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(this, RecyclerActivity.class);
+                startActivity(intent1);
             case R.id.item_intents:
-                intent = new Intent(this, IntentActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(this, IntentActivity.class);
+                startActivity(intent2);
+            case R.id.item_preferences:
+                Intent intent3 = new Intent(this, PreferenceActivity.class);
+                startActivity(intent3);
             case R.id.item_quitter:
                 finish();
             case R.id.item_search:
