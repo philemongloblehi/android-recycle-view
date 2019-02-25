@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.globlehiphilemon.s2_recyclerview.common.CommonPersonne;
 import com.globlehiphilemon.s2_recyclerview.model.Personne;
+import com.globlehiphilemon.s2_recyclerview.sqlite.SqliteActivity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -58,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
                 personnes.add(personne);
 
-                viderChamp();
-
-//                Toast.makeText(MainActivity.this, personne.toString(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
                 intent.putExtra(CommonPersonne.EXTRA_LISTE_PERS, (Serializable) personnes);
                 startActivity(intent);
@@ -86,24 +84,27 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_list:
                 Intent intent1 = new Intent(this, RecyclerActivity.class);
                 startActivity(intent1);
+                break;
             case R.id.item_intents:
                 Intent intent2 = new Intent(this, IntentActivity.class);
                 startActivity(intent2);
+                break;
             case R.id.item_preferences:
                 Intent intent3 = new Intent(this, PreferenceActivity.class);
                 startActivity(intent3);
-            case R.id.item_quitter:
-                finish();
+                break;
+            case R.id.item_sqlite:
+                Intent intent4 = new Intent(this, SqliteActivity.class);
+                startActivity(intent4);
+                break;
             case R.id.item_search:
                 Toast.makeText(this, "Pas de recherche pour le moment", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.item_quitter:
+                finish();
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void viderChamp() {
-        this.txtNom.setText("");
-        this.txtPrenoms.setText("");
-        this.txtCommune.setText("");
-    }
 }

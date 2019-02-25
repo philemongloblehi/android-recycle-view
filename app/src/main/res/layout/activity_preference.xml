@@ -6,14 +6,16 @@
     android:orientation="vertical"
     tools:context=".PreferenceActivity">
 
+    <include layout="@layout/toolbar" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="PARAMETRE DU WIFI"
+        android:text="Paramètre du wifi"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,10 +30,19 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/txt_nom_wifi"
+            android:id="@+id/edt_nom_wifi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_v_nom_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="wiffi val"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -48,12 +59,20 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/txt_password"
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="textPassword"
+            android:textSize="20sp" />
 
-            android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/txt_v_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="pass val"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -74,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:checked="true" />
+            android:checked="false" />
 
     </LinearLayout>
 
@@ -83,19 +102,25 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:id="@+id/btn_ajout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="AFFICHER PASSWORD"
-            android:textSize="20sp" />
+            android:background="@android:color/holo_green_dark"
+            android:text="Ajout nom et pass"
+            android:textColor="@android:color/white" />
 
-        <CheckBox
-            android:id="@+id/show_password"
+        <Button
+            android:id="@+id/btn_memoriser"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:checked="true" />
+            android:background="@android:color/holo_green_dark"
+            android:text="Memoriser"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

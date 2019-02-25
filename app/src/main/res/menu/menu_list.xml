@@ -24,6 +24,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/item_sqlite"
+        android:title="Sqlite"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/item_quitter"
         android:title="Quitter"
         app:showAsAction="never" />
