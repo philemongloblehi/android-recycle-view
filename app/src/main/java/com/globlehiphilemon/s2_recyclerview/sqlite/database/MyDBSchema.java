@@ -6,7 +6,7 @@ public class MyDBSchema {
 
         public static final String TABLE_NAME = "etudiant";
 
-        public static final class myColumns {
+        public static final class MyColumns {
 
             public static final String ID = "id";
             public static final String NOM = "nom";
@@ -20,7 +20,7 @@ public class MyDBSchema {
 
         public static final String TABLE_NAME = "salle";
 
-        public static final class myColumns {
+        public static final class MyColumns {
 
             public static final String ID = "id";
             public static final String NOM = "designation";

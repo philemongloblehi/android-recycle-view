@@ -8,6 +8,10 @@ public class Etudiant {
     private String commune;
     private String filiere;
 
+    public Etudiant() {
+        super();
+    }
+
     public Etudiant(String nom, String prenoms, String commune, String filiere) {
         this.nom = nom;
         this.prenoms = prenoms;
