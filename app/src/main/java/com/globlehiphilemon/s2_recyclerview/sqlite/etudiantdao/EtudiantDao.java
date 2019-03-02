@@ -111,6 +111,7 @@ public class EtudiantDao {
             while (!cursorWrapper.isAfterLast()) {
 
                 etudiantList.add(cursorWrapper.getEtudiant());
+                cursorWrapper.moveToNext();
             }
 
         } finally {

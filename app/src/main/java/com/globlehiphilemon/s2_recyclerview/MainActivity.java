@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.globlehiphilemon.s2_recyclerview.common.CommonPersonne;
 import com.globlehiphilemon.s2_recyclerview.model.Personne;
+import com.globlehiphilemon.s2_recyclerview.sqlite.RecyclerEtudiantActivity;
 import com.globlehiphilemon.s2_recyclerview.sqlite.SqliteActivity;
 
 import java.io.Serializable;
@@ -99,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.item_search:
                 Toast.makeText(this, "Pas de recherche pour le moment", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.item_list_etudiant:
+                Intent intent5 = new Intent(this, RecyclerEtudiantActivity.class);
+                startActivity(intent5);
                 break;
             case R.id.item_quitter:
                 finish();

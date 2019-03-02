@@ -6,5 +6,6 @@
     <string name="btn_save">Enregistrer</string>
     <string name="title">FORMULAIRE PERSONNES</string>
     <string name="btn_cancel">Annuler</string>
-    <string name="tv_filiere">Filière</string>
+    <string name="tv_filiere">FILIERE</string>
+    <string name="btn_show_all">SHOW ALL DATA</string>
 </resources>

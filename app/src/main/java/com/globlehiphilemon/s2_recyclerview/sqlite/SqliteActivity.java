@@ -1,5 +1,6 @@
 package com.globlehiphilemon.s2_recyclerview.sqlite;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,8 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.globlehiphilemon.s2_recyclerview.R;
+import com.globlehiphilemon.s2_recyclerview.sqlite.common.CommonEtudiant;
 import com.globlehiphilemon.s2_recyclerview.sqlite.etudiantdao.EtudiantDao;
 import com.globlehiphilemon.s2_recyclerview.sqlite.model.Etudiant;
+
+import java.io.Serializable;
 
 public class SqliteActivity extends AppCompatActivity {
 
@@ -20,6 +24,7 @@ public class SqliteActivity extends AppCompatActivity {
     private EditText txtCommune;
     private EditText txtFiliere;
     private Button btnAjouter;
+    private Button btnShowAll;
 
     private Etudiant etudiant;
     private EtudiantDao etudiantDao;
@@ -42,6 +47,7 @@ public class SqliteActivity extends AppCompatActivity {
         txtFiliere = findViewById(R.id.txt_filiere_eleve);
 
         btnAjouter = findViewById(R.id.btn_ajouter_eleve);
+        btnShowAll = findViewById(R.id.btn_show_all_eleve);
 
         btnAjouter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +64,12 @@ public class SqliteActivity extends AppCompatActivity {
 
                     Toast.makeText(SqliteActivity.this, "Elève ajouté avec succès", Toast.LENGTH_LONG).show();
 
+                    clearAll();
+
+                    Intent intent = new Intent(SqliteActivity.this, RecyclerEtudiantActivity.class);
+                    intent.putExtra(CommonEtudiant.EXTRA_LISTE_ETUDIANTS, (Serializable) etudiant);
+                    startActivity(intent);
+
                 } else {
 
                     Toast.makeText(SqliteActivity.this, "Erreur d'ajout", Toast.LENGTH_LONG).show();
@@ -65,5 +77,13 @@ public class SqliteActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void clearAll() {
+
+        txtNom.getText().clear();
+        txtPrenoms.getText().clear();
+        txtFiliere.getText().clear();
+        txtCommune.getText().clear();
     }
 }

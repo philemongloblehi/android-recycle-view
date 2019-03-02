@@ -19,8 +19,18 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/item_list_etudiant"
+        android:title="Liste etudiants"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/item_preferences"
         android:title="Preferences"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_service_thread"
+        android:title="Service Thread"
         app:showAsAction="never" />
 
     <item

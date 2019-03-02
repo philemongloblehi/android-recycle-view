@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sqlite.SqliteActivity"></activity>
+        <service
+            android:name=".servicethread.ServiceActivity"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".servicethread.ThreadActivity" />
+        <activity android:name=".sqlite.RecyclerEtudiantActivity" />
+        <activity android:name=".sqlite.SqliteActivity" />
         <activity android:name=".PreferenceActivity" />
         <activity android:name=".IntentActivity" />
         <activity android:name=".RecyclerActivity" />
